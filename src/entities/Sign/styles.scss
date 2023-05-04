@@ -1,0 +1,151 @@
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .signIn {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    max-width: 815px;
+    .wrapper {
+      font-family: "Gilroy";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 15px;
+      display: flex;
+      gap: 15px;
+      label:not(.provider, .seller, .provider__active, .seller__active) {
+        min-width: 300px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      input {
+        border: 1px solid #76777e;
+        border-radius: 5px;
+        padding: 13px;
+        width: 100%;
+        border-radius: 5px;
+        :hover {
+          border: 1.5px solid #66d7e5;
+          border-radius: 5px;
+        }
+      }
+      button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 32px;
+        gap: 12px;
+        background: #00bcd4;
+        border-radius: 5px;
+        border: none;
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+      span {
+        color: #00bcd4;
+      }
+      .checkbox {
+        display: flex;
+        input {
+          display: none;
+        }
+        label::before {
+          content: "";
+          display: inline-block;
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          border: 1px solid #a4a5a9;
+        }
+        label {
+          position: relative;
+        }
+        label::before,
+        label::after {
+          position: absolute;
+          top: 24px;
+          left: 0;
+        }
+        label::after {
+          position: absolute;
+          top: 38%;
+          left: 3px;
+          content: "";
+          display: inline-block;
+          height: 10px;
+          width: 10px;
+          background-color: #00bcd4;
+          border-radius: 50%;
+        }
+        input[type="checkbox"] + label::after {
+          content: none;
+        }
+        input[type="checkbox"]:checked + label::after {
+          content: "";
+        }
+        input[type="checkbox"]:focus + label::before {
+          outline: rgb(59, 153, 252) auto 5px;
+        }
+        .text {
+          padding-left: 25px;
+          display: block;
+          width: 100%;
+        }
+      }
+      .role {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .provider {
+          padding: 13px;
+          width: 100%;
+          border: 1px solid #76777e;
+          border-radius: 5px 0px 0px 5px;
+          display: flex;
+          justify-content: center;
+          &__active {
+            padding: 13px;
+            width: 100%;
+            display: flex;
+          justify-content: center;
+            border: 1px solid #33c9dd;
+            background: #33c9dd;
+            border-radius: 5px 0px 0px 5px;
+          }
+        }
+        .seller {
+          padding: 13px;
+          width: 100%;
+          border: 1px solid #76777e;
+          border-radius: 0px 5px 5px 0px;
+          display: flex;
+          justify-content: center;
+          &__active {
+            padding: 13px;
+            width: 100%;
+            display: flex;
+          justify-content: center;
+            border: 1px solid #33c9dd;
+            background: #33c9dd;
+            border-radius: 0px 5px 5px 0px; 
+          }
+        }
+      }
+    }
+  
+    input[type="radio"] {
+      display: none; /* hide the radio button */
+    }
+  }
+}

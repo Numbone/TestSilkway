@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+    align-items: self-start;
+    width: 100%;
+    .menu{
+        height: min-content;
+    }
+    .content__role{
+        width: 100%;
+        .wrapper_product{
+            padding: 20px;
+            width: 100%;
+        }
+    }
+}

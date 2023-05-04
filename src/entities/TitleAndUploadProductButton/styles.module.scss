@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  .text {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 32px;
+    color: #1b1d28;
+  }
+  .button {
+    padding: 12px 32px;
+    background: #00bcd4;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-family: "Avenir";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

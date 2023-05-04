@@ -1,0 +1,37 @@
+.provider_order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 12px;
+  .provider_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Avenir";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1d28;
+    gap: 5px;
+    .value {
+      font-weight: 900;
+    }
+  }
+  .btn {
+    background: #00bcd4;
+    border-radius: 5px;
+    padding: 12px 32px;
+    font-family: "Avenir";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    width: fit-content;
+  }
+}

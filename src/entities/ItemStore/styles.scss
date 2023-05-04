@@ -1,0 +1,76 @@
+.item_store {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 19px;
+  background-color: white;
+  border-radius: 5px;
+  .img {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &_content {
+    width: 100%;
+    .top {
+      font-family: "Avenir";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1b1d28;
+      margin-bottom: 10px;
+    }
+    .cost {
+      display: flex;
+      gap: 10px;
+      font-family: "Avenir";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: #1b1d28;
+      margin-bottom: 10px;
+      .star {
+        display: flex;
+        gap: 10px;
+      }
+    }
+    .counter {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .count {
+        font-family: "Avenir";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: #1b1d28;
+      }
+      .btn {
+        background: #00bcd4;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 32px;
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-family: "Avenir";
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+  }
+}

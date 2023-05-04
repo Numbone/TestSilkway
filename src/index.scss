@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Avenir";
+  src: local("AvenirLTStd-Book"),
+    url("./shared/fonts/AvenirLTStd-Book.otf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: local("AvenirLTStd-Black"),
+    url("./shared/fonts/AvenirLTStd-Black.otf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy-Light"),
+    url("./shared/fonts/Gilroy-Light.otf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy-ExtraBold"),
+    url("./shared/fonts/Gilroy-ExtraBold.otf") format("truetype");
+  font-weight: 700;
+}
+#root{
+  min-height: 99.94vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden  ;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: #F4F7FA;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  // text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+button:disabled,
+button[disabled]{
+ 
+  background-color: #cccccc !important;
+  color: #666666;
+}
+.slick-dots {
+  bottom: auto;
+  // opacity: 0;
+}
