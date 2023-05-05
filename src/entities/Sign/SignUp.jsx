@@ -35,6 +35,7 @@ const SignUp = () => {
       navigate("/auth?key=login")
     } catch (error) {}
   };
+  console.log(watch("role"))
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form">
       <div className="signIn">
@@ -48,7 +49,7 @@ const SignUp = () => {
               }
             >
               {" "}
-              Заказчик
+              Поставщик
             </label>
             <input
               id="provider"
@@ -63,7 +64,7 @@ const SignUp = () => {
               }
             >
               {" "}
-              Поставщик
+              Заказчик
             </label>
             <input
               id="seller"

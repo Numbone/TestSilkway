@@ -160,13 +160,16 @@
       line-height: 40px;
       color: #1b1d28;
     }
-    .basket_icons {
+    .btn_wrapper{
+      display: flex;
+      gap: 20px;
+.basket_icons {
       background: #00bcd4;
       border-radius: 5px;
       color: white;
       display: flex;
       gap: 12px;
-      padding: 12px;
+      padding: 12px 36px;
       border: none;
       align-items: center;
       cursor: pointer;
@@ -176,10 +179,12 @@
       border-radius: 5px;
       display: flex;
       align-items: center;
-      padding: 12px 48px;
+      padding: 12px 60px;
       border: none;
       color: white;
       cursor: pointer;
     }
+    }
+    
   }
 }

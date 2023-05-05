@@ -5,6 +5,6 @@ export const handleProviderProductsCreate=async(FormData)=>{
     return data
 }
 export const handleProviderProductsUser=async()=>{
-    const data=await $authHost.get('api/provider/products/user')
+    const {data}=await $authHost.get('api/provider/products/user')
     return data
-}
+}   

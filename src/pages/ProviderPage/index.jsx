@@ -7,8 +7,8 @@ import { handleProviderProductsUser } from "../../shared/api/providerApi";
 const ProviderPage = () => {
   const [products, setProducts] = useState([]);
   const handleGetProductsUser = async () => {
-    const result = await handleProviderProductsUser();
-    setProducts(result);
+    const {data} = await handleProviderProductsUser();
+    setProducts(data);
   };
 
   const array = [
@@ -19,6 +19,7 @@ const ProviderPage = () => {
   useEffect(() => {
     handleGetProductsUser();
   }, []);
+  console.log(products)
   return (
     <div className="flex">
       <Menu array={array} />
@@ -26,19 +27,21 @@ const ProviderPage = () => {
         <TitleAndUploadProductButton title={"Товары"} />
         <div className="wrapper_product">
           <div className="product">
-            {products!==undefined ? products?.map((item) => (
-              <Item id={item?.id}
-              name={item?.name}
-              price={item?.price}
-              counts={item?.counts}
-              description={item?.description}
-              registerDate={item?.registerDate}
-              status={item?.status}
-              users_id={item?.users_id}
-              unit_id={item?.unit_id}
-              category_id={item?.category_id}
-              image_path={item?.image_path} />
-            )):null}
+            {products?.map((product) => (
+              <Item 
+              key={product?.id}
+              id={product?.id}
+              name={product?.name}
+              price={product?.price}
+              counts={product?.counts}
+              description={product?.description}
+              registerDate={product?.registerDate}
+              status={product?.status}
+              users_id={product?.users_id}
+              unit_id={product?.unit_id}
+              category_id={product?.category_id}
+              image_path={product?.image_path} />
+            ))}
           </div>
         </div>
       </div>

@@ -1,1 +1,1 @@
-export const REACT_APP_API_URL='https://api.silkway.systems/'
+export const REACT_APP_API_URL='https://api1.silkway.systems/'

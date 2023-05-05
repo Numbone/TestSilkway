@@ -3,30 +3,18 @@ import Menu from "../../entities/Menu";
 import "./styles.scss";
 import { useForm } from "react-hook-form";
 import { handleProviderProductsCreate } from "../../shared/api/providerApi";
-import { toast } from "react-toastify";
-import { ToastContainer } from "react-toastify";
+import {  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const UploadPage = () => {
   const { register, handleSubmit, watch, reset } = useForm();
-  <ToastContainer
-    position="top-right"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-    pauseOnHover
-    theme="light"
-  />;
+  
   const [file, setFile] = useState(null);
   const selectFile = (e) => {
     setFile(e.target.files[0]);
   };
   console.log(file);
   const notify = () =>
-    toast("Товар добавлен", {
+    toast.success("Товар добавлен", {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -48,10 +36,11 @@ const UploadPage = () => {
     try {
       const result = await handleProviderProductsCreate(formData);
       reset();
-      notify();
+      
     } catch (error) {
       console.log(error);
     } finally {
+      notify();
     }
   };
   const array = [
