@@ -2,7 +2,10 @@ import React from "react";
 import "./styles.scss";
 import BasketBlock from "../../entities/BasketBlock";
 import SellerConfirmOrderItem from "../../entities/SellerConfirmOrderItem";
+import { useLocation } from "react-router-dom";
 const SellerDecorPage = () => {
+  const location=useLocation()
+  const data =location?.state
   return (
     <div className="confirm">
       <div className="order_confirm">
@@ -32,9 +35,9 @@ const SellerDecorPage = () => {
           </svg>
         </div>
         <hr></hr>
-        <SellerConfirmOrderItem />
+        <SellerConfirmOrderItem item={data} />
       </div>
-      <BasketBlock />
+      <BasketBlock item={data} />
     </div>
   );
 };

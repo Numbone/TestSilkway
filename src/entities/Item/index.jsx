@@ -18,7 +18,7 @@ const Item = ({
   image_path,
 }) => {
   const navigate = useNavigate();
-  
+  console.log(image_path)
   return (
     <div className="good">
       <div className="good__content">

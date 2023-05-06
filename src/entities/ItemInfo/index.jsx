@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./styles.scss";
 import { BiMinus } from "react-icons/bi";
 import { BiPlus } from "react-icons/bi";
@@ -7,6 +7,7 @@ import { ReactComponent as Basket } from "../../shared/icons/Item/basket.svg";
 import { handleSellerTransactionAdd } from "../../shared/api/sellerApi";
 import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Context } from "../..";
 const ItemInfo = ({
   id,
   name,
@@ -21,6 +22,7 @@ const ItemInfo = ({
 }) => {
   const location = useLocation();
   const [counter, setCounter] = useState(1);
+  const {user}=useContext(Context)
   const notifyAdd = () =>
     toast.success("Товар добавлен в корзину", {
       position: "top-right",
@@ -75,8 +77,10 @@ const ItemInfo = ({
         <div className="address">+7 (777) 777-77-77</div>
         <div className="address">tooNuras@gmail.com</div>
       </div>
-      <div className="basket__wrapper">
-        <div className="counter">
+      {
+        user?.role!=="provider"?
+        <div className="basket__wrapper">
+        <div className="counter" >
           <div
             className="minus"
             onClick={() => counter > 1 && setCounter((count) => count - 1)}
@@ -107,7 +111,10 @@ const ItemInfo = ({
             Купить
           </button> */}
         </div>
-      </div>
+      </div>:
+      null
+      }
+      
     </div>
   );
 };

@@ -8,11 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const UploadPage = () => {
   const { register, handleSubmit, watch, reset } = useForm();
   
-  const [file, setFile] = useState(null);
-  const selectFile = (e) => {
-    setFile(e.target.files[0]);
-  };
-  console.log(file);
+ 
   const notify = () =>
     toast.success("Товар добавлен", {
       position: "top-right",
@@ -112,7 +108,7 @@ const UploadPage = () => {
               <input
                 id="file"
                 type="file"
-                onChange={selectFile}
+            
                 {...register("file")}
               />
             </div>

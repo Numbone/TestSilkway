@@ -2,11 +2,14 @@ import React from "react";
 import SellerConfirmOrderItem from "../../entities/SellerConfirmOrderItem";
 import BasketBlock from "../../entities/BasketBlock";
 import "./styles.scss";
+import { useLocation } from "react-router-dom";
 const SellerPayOrderPage = () => {
+  const location=useLocation()
+  const data =location?.state
   return (
     <div className="confirm">
-      <div>
-        <div className="map">
+      
+        {/* <div className="map">
           <div className="map_content">
             <svg
               width="24"
@@ -38,7 +41,7 @@ const SellerPayOrderPage = () => {
             </svg>
             <div className="map_text">Добавьте адрес доставки</div>
           </div>
-        </div>
+        </div> */}
         <div className="order_confirm">
           <div className="title">
             <div className="text">Заказ</div>
@@ -66,10 +69,10 @@ const SellerPayOrderPage = () => {
             </svg>
           </div>
           <hr></hr>
-          <SellerConfirmOrderItem />
+          <SellerConfirmOrderItem  item={data}/>
         </div>
-      </div>
-      <BasketBlock />
+      
+      <BasketBlock  item={data} />
     </div>
   );
 };

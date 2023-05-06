@@ -18,24 +18,24 @@ const Silder = () => {
   return (
     <div className="wrapper_slider" >
       <Slider {...settings}>
-        <div>
+        <div className="slider_wrapper">
        
           <img src={img} alt=""></img>
         </div>
-        <div>
-          <img src={img} alt=""></img>
+        <div  className="slider_wrapper">
+          <img src={"http://businesspskov.ru/pictures/141223144504.jpg"} alt=""></img>
         </div>
-        <div>
-          <img src={img} alt=""></img>
+        <div  className="slider_wrapper">
+          <img src={"http://businesspskov.ru/pictures/141223163518.jpg"} alt=""></img>
         </div>
-        <div>
-          <img src={img} alt=""></img>
+        <div  className="slider_wrapper">
+          <img src={"http://businesspskov.ru/pictures/141223165944.jpg"} alt=""></img>
         </div>
-        <div>
-          <img src={img} alt=""></img>
+        <div  className="slider_wrapper">
+          <img src={"http://businesspskov.ru/pictures/141223165944.jpg"} alt=""></img>
         </div>
-        <div>
-          <img src={img} alt=""></img>
+        <div  className="slider_wrapper">
+          <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLbW9kit3VJK_yMrRPYWxCUW8YKVDJ0jmQ4w&usqp=CAU"} alt=""></img>
         </div>
       </Slider>
     </div>

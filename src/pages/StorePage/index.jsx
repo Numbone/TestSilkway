@@ -19,7 +19,7 @@ const StorePage = () => {
           <div className="statistic_top">
             <div className="statistic_top_text">Товары: 34</div>
             <div className="statistic_top_text">Количество шт. товара: 1200 ( -120 сегодня )</div>
-            <div className="btn">Открыть статистику склада</div>
+            <div className="btn">Создать склад </div>
           </div>
           <div className="statistic_search">
             <SeacrhIcon/>

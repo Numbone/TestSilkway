@@ -1,14 +1,12 @@
 
 .wrapper_slider{
-    width: 100%;
-    height: 400px;
     .slider_wrapper{
-        height: 100%;
-        width: 100%;
+        width: 600px;
+        height: 400px;
         img{
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: fill;
         }
     }
 }

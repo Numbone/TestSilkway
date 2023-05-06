@@ -6,7 +6,14 @@ import Item from "../../entities/Item";
 import { handleItemAll } from "../../shared/api/ItemApi";
 
 const HomePage = () => {
-  const array = ["Options", "Options", "Options", "Options", "Options"];
+  const array = [
+    { name: "Молоко", url: "/" },
+    { name: "Шоколадка", url: "/" },
+    { name: "Мороженое", url: "/" },
+    { name: "Картошка", url: "/" },
+    { name: "Газировка", url: "/" },
+    { name: "Кола", url: "/" },
+  ];
   const [products, setProducts] = useState([]);
   const handleGetProductsAll = async () => {
     const { data } = await handleItemAll();
@@ -38,6 +45,7 @@ const HomePage = () => {
             users_id={item?.users_id}
             unit_id={item?.unit_id}
             category_id={item?.category_id}
+            image_path={item?.image_path}
           />
         ))}
       </div>

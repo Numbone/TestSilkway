@@ -33,14 +33,22 @@ const OrderPage = () => {
             <SeacrhIcon />
             <input type="text" placeholder="Что вы ищите" />
           </div>
+          
           {/* content */}
           <div className="order_content">
             {order?.map((item) => (
-              <ProviderOrderItem key={item?.id} 
-              products_amount={item?.products_amount}
-              products_id={item?.products_id}
-              products_name={item?.products_name}
-              products_status={item?.products_status}
+              <ProviderOrderItem
+                item={item}
+                key={item?.id}
+                id={item?.id}
+                products_amount={item?.products_amount}
+                products_id={item?.products_id}
+                products_name={item?.products_name}
+                products_status={item?.products_status}
+                provider_id={item?.provider_id}
+                seller_id={item?.seller_id}
+                status={item?.status}
+                total_cost={item?.total_cost}
               />
             ))}
           </div>

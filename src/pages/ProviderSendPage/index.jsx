@@ -3,7 +3,7 @@ import "./styles.scss";
 import ProviderConfirmOrderItem from "../../entities/ProviderConfirmOrderItem";
 import BasketBlock from "../../entities/BasketBlock";
 import { useLocation } from "react-router-dom";
-const   ProviderConfirmPage = () => {
+const   ProviderSendPage = () => {
   const location=useLocation()
   const data =location?.state
   return (
@@ -42,4 +42,4 @@ const   ProviderConfirmPage = () => {
   );
 };
 
-export default ProviderConfirmPage;
+export default ProviderSendPage;
